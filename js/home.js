@@ -121,19 +121,10 @@ function animateValue(obj, start, end, duration) {
     window.requestAnimationFrame(step);
   }
   
-  let waypoint = new Waypoint({
-    element: document.querySelector('.countingNum'),
-    handler: function(direction) {
-        if (direction === 'down') {
-            document.querySelector('').style.display = 'block' ;
-            document.querySelector('').classList.add('animate__bounceIn') ;
-
-        } else {
-            document.querySelector('').style.display = 'none' ;
-        }
-    },
-    offset: '75%', 
+  var waypoints = $('#countingNum').waypoint(function () {
+      console.log('hello')
   })
+
 
   animateValue(document.getElementById("rotate0"), 0, 768, 5000);
   animateValue(document.getElementById("rotate1"), 0, 120, 5000);
