@@ -1,0 +1,108 @@
+body {
+    scroll-behavior: smooth;
+}
+.planbtn {
+    background-color: aqua;
+    color: #fff;
+}
+.planbtn:focus{
+    outline:none; 
+    box-shadow:none;
+}
+body {
+    background-color:aquamarine;
+}
+.number-font {
+    font-family: 'Benne', serif;
+    font-family: 'Playfair Display', serif;
+}
+.number-font-color{
+    color: #00B2B2;
+}
+.transition {
+    transition: 1s;
+}
+.delay {
+    animation-delay: 0.3s;
+}
+#yearly {
+    padding-top: 100px;
+}
+.suscribeBtn {
+    position: sticky;
+}
+.modal_container.showModal {
+    display: block;
+    opacity: 1;
+
+}
+.modal_container {
+    border: 1px solid #000;
+    /* width: 30%; */
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    transition: 1s;
+  }
+  .modal_box {
+    width: 40%;
+    margin: 70px auto;
+    position: relative;
+    animation: modalOpen 1s;
+}
+.modal-header {
+  background-color:#002147;
+  color: #fff;
+  font-weight: bolder;
+  font-size: x-small;
+  height: 7vh;
+}
+.modal-content {
+    height: 70vh;
+}
+.close-btn {
+  border-radius: 5px;
+  border: solid 1px #00000055;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cardFade {
+    animation: modalOpen 2s ;
+}
+
+.navbar-nav .nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transform: scale(1.03);
+    transition: transform 2s ease-in-out;
+    cursor: pointer;
+
+}
+
+.footer {
+    position: relative;
+}
+.roadToStart {
+    position: absolute;
+    z-index: 100;
+    bottom: 50px;
+    right: 20px;
+}
+

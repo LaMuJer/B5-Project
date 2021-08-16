@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Padauk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+
+$font-family-sans-serif :  'Montserrat','Padauk', sans-serif;
+$primary : #fdc800;
+$secondary : #002147;
+$success : #0a9396;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "../node_modules/animate.css/animate.css";
+
+.bg-soft{ 
+  background-color: #f0f4f9;
+  
+}
+.bgsoftPadding{
+  padding-bottom: 170px;
+}
+.fontsize{
+  font-size: x-small;
+}
+.fontsize2{
+  font-size: small;
+}
+.subPhoto {
+  position: absolute;
+  left : 20px;
+  top: 165px;
+}
+.card_width {
+  width : 350px;
+  height: 310px;
+}
+.card_height {
+  height: 310px;
+}
+.positionDiv {
+  margin-top: -160px  ;
+}
+.positionDivForHome{
+  margin-top: 20px;
+}
+a{
+  cursor: pointer;
+}
+.planbtn {
+  background-color: #a8dadc;
+  color:#fff;
+}
+.numeral-font{
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  color: #fdc800 ;
+}
+.insta-4to{
+  position: absolute;
+  margin-top: -30px;
+  margin-left: -30px;
+}

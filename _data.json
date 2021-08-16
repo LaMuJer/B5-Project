@@ -1,0 +1,94 @@
+{
+    "dataArray" : [
+        {
+            "title" : "User Resarch For User Experience Design" ,
+            "subTitle" : "The Museum of Modern Art",
+            "photo" : "./img/2.png",
+            "subphoto" : "./img/green.png"
+        },
+        {
+            "title" : "Buddhism and Modern Technology" ,
+            "subTitle" : "The Museum of Modern Art",
+            "photo" : "./img/3.png",
+            "subphoto" : "./img/red.png"
+        },
+        {
+            "title" : "Introduction to Philosophy" ,
+            "subTitle" : "Duke University",
+            "photo" : "./img/4.png",
+            "subphoto" : "./img/blue.png"
+        },
+        {
+            "title" : "Advance on seeing through Photographs" ,
+            "subTitle" : "Duke University",
+            "photo" : "./img/5.png",
+            "subphoto" : "./img/green.png"
+        },
+        {
+            "title" : "Think Again 1 : How to Understand Arguments" ,
+            "subTitle" : "The Museum of Modern Art",
+            "photo" : "./img/6.png",
+            "subphoto" : "./img/blue.png"
+        },
+        {
+            "title" : "User Resarch of User Experience Design" ,
+            "subTitle" : "The Museum of Modern Art",
+            "photo" : "./img/7.png",
+            "subphoto" : "./img/red.png"
+        },
+        {
+            "title" : "User Resarch For User Experience Design" ,
+            "subTitle" : "The Museum of Modern Art",
+            "photo" : "./img/7.png",
+            "subphoto" : "./img/green.png"
+        },
+        {
+            "title" : "Intoduction to Logic and Critical Thinking" ,
+            "subTitle" : "Duke University",
+            "photo" : "./img/9.png",
+            "subphoto" : "./img/green.png"
+        },
+        {
+            "title" : "Modern and Contemporary Art and Design" ,
+            "subTitle" : "The Museum of Modern Art",
+            "photo" : "./img/10.png",
+            "subphoto" : "./img/blue.png"
+        },
+        {
+            "title" : "User Resarch For User Experience Design" ,
+            "subTitle" : "Duke University",
+            "photo" : "./img/8.png",
+            "subphoto" : "./img/green.png"
+        },
+        {
+            "title" : "Introduction to Logic and Crtical Thinking" ,
+            "subTitle" : "The Museum of Modern Art",
+            "photo" : "./img/5.png",
+            "subphoto" : "./img/green.png"
+        },
+        {
+            "title" : "Modern and Contemporary Art and Design" ,
+            "subTitle" : "Duke University",
+            "photo" : "./img/9.png",
+            "subphoto" : "./img/blue.png"
+        },
+        {
+            "title" : "User Resarch For User Experience Design" ,
+            "subTitle" : "The Museum of Modern Art",
+            "photo" : "./img/2.png",
+            "subphoto" : "./img/green.png"
+        },
+        {
+            "title" : "Introduction to Logic and Crtical Thinking" ,
+            "subTitle" : "Duke University",
+            "photo" : "./img/8.png",
+            "subphoto" : "./img/green.png"
+        },
+        {
+            "title" : "Modern and Contemporary Art and Design" ,
+            "subTitle" : "Duke University",
+            "photo" : "./img/7.png",
+            "subphoto" : "./img/blue.png"
+        }
+    ] 
+}
