@@ -105,31 +105,11 @@ signUp.addEventListener('click' , () => {
 
 close.addEventListener('click' , () => {
     modal.classList.remove('showModal');
-})
+});
 
-// Counter up
-function animateValue(obj, start, end, duration) {
-    let startTimestamp = 0;
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      obj.innerHTML = Math.floor(progress * (end - start) + start);
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  }
+
+
   
-  var waypoints = $('#countingNum').waypoint(function () {
-      console.log('hello')
-  })
-
-
-  animateValue(document.getElementById("rotate0"), 0, 768, 5000);
-  animateValue(document.getElementById("rotate1"), 0, 120, 5000);
-  animateValue(document.getElementById("rotate2"), 0, 8300, 5000);
-  animateValue(document.getElementById("rotate3"), 0, 32, 5000);
 
 
 

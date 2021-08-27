@@ -225,22 +225,22 @@
         <div class="bg-soft p-lg-5 d-flex justify-content-between align-items-center">
             <div class="col-lg-3 bg-soft d-flex flex-column justify-content-between align-items-center">
                 <img src="./img/Component 19 – 2.svg" alt="" class="img-fluid mb-lg-2"  > 
-                <p class="mb-lg-3 fw-bolder display-4 number-font " id="rotate0">768</p>
+                <p class="mb-lg-3 fw-bolder display-4 number-font rotate" id="rotate0 ">768</p>
                 <p class="mb-0 fw-bold fontsize2 number-font-color">COURSES PUBLISHED</p>
             </div>
             <div class="col-lg-3 bg-soft d-flex flex-column justify-content-between align-items-center">
                 <img src="./img/Component 18 – 2.svg" alt="" class="img-fluid mb-lg-2"  >
-                <p class="mb-lg-3 fw-bolder display-4 number-font " id="rotate1">120</p>
+                <p class="mb-lg-3 fw-bolder display-4 number-font rotate" id="rotate1 ">120</p>
                 <p class="mb-0 fw-bold fontsize2 number-font-color">EXPERT INSTRUCTORS</p>
             </div>
             <div class="col-lg-3 bg-soft d-flex flex-column justify-content-between align-items-center">
                 <img src="./img/Component 20 – 2.svg" alt="" class="img-fluid mb-lg-2"  >
-                <p class="mb-lg-3 fw-bolder display-4 number-font " id="rotate2">8300</p>
+                <p class="mb-lg-3 fw-bolder display-4 number-font rotate" id="rotate2 ">8300</p>
                 <p class="mb-0 fw-bold fontsize2 number-font-color">HAPPY LEARNERS</p>
             </div>
             <div class="col-lg-3 bg-soft d-flex flex-column justify-content-between align-items-center">
                 <img src="./img/Component 22 – 3.svg" alt="" class="img-fluid mb-lg-2"  >
-                <p class="mb-lg-3 fw-bolder display-4 number-font " id="rotate3">32</p>
+                <p class="mb-lg-3 fw-bolder display-4 number-font rotate" id="rotate3 ">32</p>
                 <p class="mb-0 fw-bold fontsize2 number-font-color">AWARDS ACHIEVED</p>
             </div>
         </div>
@@ -270,7 +270,7 @@
         </div>
     </div>
 </section>
-<section class="bg-secondary footer">
+<section class="bg-secondary " id="footer">
     <div class="container">
         <div class="row py-5">
             <div class="col-12 col-lg-6">
@@ -339,7 +339,9 @@
             </div>
         </div>
         
-        
+        <a href=" #home " style="display:none;" class=" btn btn-sm btn-primary rounded-circle scroll-to-top animate__animated">
+            <i class="fas fa-chevron-up"></i>
+        </a>
 
     </div>
     
@@ -350,8 +352,9 @@
 
 <script src="./node_modules/wow.js/dist/wow.min.js"></script>
 <script src="./node_modules/scrollreveal/dist/scrollreveal.js"></script>
-<script src="./node_modules/wayponit js/imakewebthings-waypoints-34d9f6d/lib/jquery.waypoints.min.js"></script>
-<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" ></script>
+<script src="./node_modules/lib/jquery.waypoints.js"></script>
 <script src="./js/home.js"></script>
 
 
@@ -367,7 +370,6 @@
                     }
                     )
                     wow.init();
-
                     ScrollReveal().reveal('.card')
                     ScrollReveal().reveal('#sign-up')
                     ScrollReveal().reveal('#rotate',{
@@ -377,11 +379,36 @@
                         }
                     })
                     ScrollReveal().reveal('#scale',{
-                      
                         opacity: 0.5,
                         scale : 1.5,
-                       
                     })
+                    // Counter up
+                    var waypoint0 = new Waypoint( {
+                    element: document.getElementById('countingNum'),
+                    handler: function(dir) {
+                        
+                            $('.rotate').counterUp();
+                        
+                    },
+                    offset : '100%' ,
+                    } )
+
+                    
+                    // Waypoint contact
+                    let waypoint = new Waypoint({
+                    element: document.getElementById('footer'),
+                    handler: function(direction) {
+                        if (direction === 'down') {
+                            document.querySelector('.scroll-to-top').style.display = 'block' ;
+                            document.querySelector('.scroll-to-top').classList.add('animate__bounceIn') ;
+
+                        } else {
+                            document.querySelector('.scroll-to-top').style.display = 'none' ;
+                        }
+                    },
+                    offset: '75%', 
+                    })
+                                            
 
                     
 

@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online Learning</title>
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="./node_modules/wow.js/css/libs/animate.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -59,7 +61,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-secondary fw-bold" href="index.html">Home</a>
+                    <a class="nav-link text-secondary fw-bold" id="home" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-secondary fw-bold" href="about.html">About</a>
@@ -87,8 +89,8 @@
 
     <div class="container">
         <div class="col-12 col-lg-5 mt-lg-5">
-            <p class="mb-0 text-primary fw-bold fontsize">Course Detail</p>
-            <h2 class="fw-bold ">User Research for User Experience Design</p>
+            <p class="mb-0 text-primary fw-bold fontsize wow  animate__fadeInLeft">Course Detail</p>
+            <h2 class="fw-bold  wow  animate__fadeInLeft">User Research for User Experience Design</p>
         </div>
         <div class="p-lg-3 d-flex justify-content-between ">
             <div class="col-12 col-lg-7">
@@ -138,7 +140,7 @@
                     </li>
                     <li class="list-group-item p-lg-4 d-flex flex-column justify-content-center align-items-center"> 
                         <h6 class="text-muted">Contact a customer support at </h6>
-                        <h4 class="fw-bolder number-font-color">vctung@outlook.com</h4>
+                        <a href="#" class="fw-bolder number-font-color" style="cursor: pointer;">vctung@outlook.com</a>
                     </li>
                     
                 </ul>
@@ -152,7 +154,7 @@
 
     <!-- feedback starts -->
     <div class="container d-flex justify-content-center align-items-center" style="margin-top: 80px;"> 
-        <div class="col-lg-5 ">
+        <div class="col-lg-5 wow animate__fadeInLeft ">
             <img src="./img/Instagram post.svg" alt="" class="img-fluid insta-4to">
             <img src="./img/11.png" alt="" class="img-fluid">
             <div class=""></div>
@@ -161,12 +163,12 @@
                 <div class="text-muted fontsize">Junior Designer</div>
             </div>
         </div>
-        <div class="col-lg-5 ms-lg-4 mt-0">
-            <h2 class="fw-bold ">Successful Student <span class="text-primary">Feedback</span> </h2>
+        <div class="col-lg-5 ms-lg-4 mt-0  ">
+            <h2 class="fw-bold delay" id="scale">Successful Student <span class="text-primary delay" id="scale">Feedback</span> </h2>
             <p class="mb-0 fontsize2">Take courses from the world’s best instructors and universities. Courses include recorded auto-graded and peer-reviewed assignments, video lectures, and community discussion forums. When you complete a course, you’ll be eligible to receive a shareable electronic Course Certificate for a small fee.</p>
             <p class="mb-0 my-lg-3  fontsize2 fw-bolder">The courses that Kimmie has taken</p>
-            <div class="mt-lg-3 border bg-light d-flex justify-content-between align-items-center">
-                <img src="./img/10.png" alt="" class="img-fluid w-25">
+            <div class="mt-lg-3 border bg-light d-flex justify-content-between align-items-center ">
+                <img src="./img/10.png" alt="" class="img-fluid w-25 ">
                 <div class="p-lg-3">
                     <a class="fw-bold mb-0 text-dark fontsize2">Modern and Contemporary Art and Design</a>
                     <p class="mb-0 fontsize">The Museum of Modern Art</p>
@@ -201,7 +203,7 @@
         </div>
     </div>
 </section>
-<section class="bg-secondary">
+<section class="bg-secondary" id="footer">
     <div class="container">
         <div class="row py-5">
             <div class="col-12 col-lg-6">
@@ -269,12 +271,50 @@
                 </div>
             </div>
         </div>
+        <a href=" #home " style="display:none;" class=" btn btn-sm btn-primary rounded-circle scroll-to-top animate__animated">
+            <i class="fas fa-chevron-up"></i>
+        </a>
     </div>
 </section>
 
+<script src="./node_modules/wow.js/dist/wow.min.js"></script>
+<script src="./node_modules/scrollreveal/dist/scrollreveal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script src="./node_modules/lib/jquery.waypoints.js"></script>
 
 <script src="../js/main.js"></script>
 
+<script>
+    wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animate__animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+
+ScrollReveal().reveal('#scale',{
+    opacity: 0.5,
+    scale : 1.5,
+})
+ // Waypoint contact
+ let waypoint = new Waypoint({
+                    element: document.getElementById('footer'),
+                    handler: function(direction) {
+                        if (direction === 'down') {
+                            document.querySelector('.scroll-to-top').style.display = 'block' ;
+                            document.querySelector('.scroll-to-top').classList.add('animate__bounceIn') ;
+
+                        } else {
+                            document.querySelector('.scroll-to-top').style.display = 'none' ;
+                        }
+                    },
+                    offset: '75%', 
+                    })
+</script>
 <!--footer end-->
 </body>
 </html>

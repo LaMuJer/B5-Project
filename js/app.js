@@ -100,7 +100,7 @@ let allData = data.dataArray;
 allData.map(function(el, index) {
     card_loop.innerHTML += `
     <div class="col-lg-4 card_width mb-4">
-    <div class="card card_height">
+    <div class="card card_height wow animate__fadeInDown delay">
         
             <img src=" ${el.photo} ">
         

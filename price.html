@@ -64,7 +64,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-secondary fw-bold" href="index.html">Home</a>
+                    <a class="nav-link text-secondary fw-bold" id="home" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-secondary fw-bold" href="about.html">About</a>
@@ -305,13 +305,13 @@
 
     </div>
         <!-- yearly price ends -->
-
+        
     </div>
 </section>
 <!-- price end -->
 
 <!--footer start-->
-<section class="container">
+<section class="container" id="footer">
     <div class="row align-items-center justify-content-center py-5 my-5">
         <div class="col-8 col-md-2">
             <div class="">
@@ -402,6 +402,9 @@
                 </div>
             </div>
         </div>
+        <a href=" #home " style="display:none;" class=" btn btn-sm btn-primary rounded-circle scroll-to-top animate__animated">
+            <i class="fas fa-chevron-up"></i>
+        </a>
     </div>
 </section>
 
@@ -411,11 +414,10 @@
 
 <script src="./node_modules/wow.js/dist/wow.min.js"></script>
 <script src="./node_modules/scrollreveal/dist/scrollreveal.js"></script>
-<script src="./slick-master/slick/slick.min.js"></script>
-<script src="./jquery/dist/jquery.min.js"></script>
-<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-<script src="./js/app.js"></script>
-<script src="./js/home.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" ></script>
+<script src="./node_modules/lib/jquery.waypoints.js"></script>
+<!-- <script src="./js/app.js"></script> -->
 
 
 <script>
@@ -440,13 +442,20 @@
                         scale : 1.5,
                        
                     })
-                        // slidesToShow: 4,
-                        // slidesToScroll: 1,
-                        // autoplay: true,
-                        // autoplaySpeed: 2000,
+                     // Waypoint contact
+                     let waypoint = new Waypoint({
+                    element: document.getElementById('footer'),
+                    handler: function(direction) {
+                        if (direction === 'down') {
+                            document.querySelector('.scroll-to-top').style.display = 'block' ;
+                            document.querySelector('.scroll-to-top').classList.add('animate__bounceIn') ;
 
-                    // carousel starts    
-
+                        } else {
+                            document.querySelector('.scroll-to-top').style.display = 'none' ;
+                        }
+                    },
+                    offset: '75%', 
+                    })
                     let myCarousel = document.querySelector('#feedback')
                     let carousel = new bootstrap.Carousel(myCarousel, {
                     interval: 2000,
